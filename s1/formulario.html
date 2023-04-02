@@ -1,0 +1,106 @@
+<!-- Curso de Engenharia de Software - UniEVANGÉLICA
+Disciplina de Sistemas Gerenciadores de Banco de Dados
+Dev: Yago Romualdo Vieira - 2012064
+01/04/2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <!--  É uma tag de cabeçalho que indica o título da página, que neste caso é "Cadastro de Jogadores". -->
+    <h1>Cadastro de Jogadores</h1>
+    <!--  É Uma tag que cria um formulário. O atributo action define o 
+        destino do envio dos dados, neste caso /submit, e o atributo method define 
+        o método de envio dos dados, neste caso post. -->
+    <form action="/submit" method="post">
+        <!-- Associa um texto descritivo a um campo do formulário, neste caso o campo de entrada de texto para o nome do jogador. -->
+        <label for="nome">Nome:</label>
+        <!-- É uma tag de entrada de texto para o nome do jogador. 
+            O atributo type define o tipo do campo, neste caso text. 
+            O atributo id é um identificador único para o campo. 
+            O atributo name é o nome do campo que será enviado junto com o valor. 
+            O atributo required indica que o campo é obrigatório. -->
+        <input type="text" id="nome" name="nome" required>
+        <!-- Tag que provoca uma quebra de linha -->
+        <br>
+        <label for="posicao">Posição:</label>
+        <!-- é uma tag que cria um campo de seleção. 
+            O atributo id é um identificador único para o campo. 
+            O atributo name é o nome do campo que será enviado junto com o valor. -->
+        <select id="posicao" name="posicao">
+            <!-- É uma tag que define uma opção para o campo de seleção. 
+                O atributo value é o valor que será enviado quando essa opção for selecionada, 
+                neste caso "atacante". O texto entre as tags <option> e </option> é o texto que 
+                será exibido na lista de opções. -->
+            <option value="atacante">Atacante</option>
+            <option value="meio-campo">Meio-campo</option>
+            <option value="defesa">Defesa</option>
+            <option value="goleiro">Goleiro</option>
+        </select><br>
+
+        <label>Sexo:</label>
+        <!-- É uma tag que cria um campo de seleção do tipo "radio". 
+            O atributo type define o tipo do campo, neste caso radio. 
+            O atributo id é um identificador único para o campo. 
+            O atributo name é o nome do campo que será enviado junto com o valor. 
+            O atributo value é o valor que será enviado quando esse campo for selecionado, 
+            neste caso "M". -->
+        <input type="radio" id="masculino" name="sexo" value="M">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="sexo" value="F">
+        <label for="feminino">Feminino</label><br>
+
+        <label>País:</label>
+        <select id="pais" name="pais">
+            <option value="brasil">Brasil</option>
+            <option value="argentina">Argentina</option>
+            <option value="espanha">Espanha</option>
+            <option value="portugal">Portugal</option>
+        </select><br>
+
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <!-- É a tag para criar um campo de data. 
+            No código, é usado para permitir que o usuário insira a data de 
+            nascimento do jogador. -->
+        <input type="date" id="nascimento" name="nascimento"><br>
+
+        <label for="altura">Altura (em cm):</label>
+        <!-- O campo de entrada é do tipo number, que permite ao 
+            usuário inserir apenas números. Além disso, os atributos 
+            min e max especificam os valores mínimo e máximo que podem ser 
+            inseridos no campo, respectivamente. -->
+        <input type="number" id="altura" name="altura" min="100" max="250"><br>
+
+        <label for="email">Email:</label>
+        <!-- É um input do tipo email, que valida automaticamente se o valor 
+            inserido pelo usuário corresponde a um endereço de email válido. -->
+        <input type="email" id="email" name="email"><br>
+
+        <label for="senha">Senha:</label>
+        <!-- É um input do tipo password que mascara os caracteres inseridos pelo 
+            usuário para fins de segurança, impedindo que eles sejam exibidos na 
+            tela enquanto são digitados. -->
+        <input type="password" id="senha" name="senha"><br>
+
+        <label for="foto">Foto:</label>
+        <!-- É a tag para criar um botão de envio de arquivo. 
+            No código, é usado para permitir que o usuário envie uma foto do jogador. -->
+        <input type="file" id="foto" name="foto"><br>
+
+        <!-- Cria um botão para enviar os dados do formulário. -->
+        <input type="submit" value="Cadastrar">
+        <!-- Cria um botão para redefinir os valores do formulário para os valores padrão. -->
+        <input type="reset" value="Limpar">
+    </form>
+
+</body>
+
+</html>

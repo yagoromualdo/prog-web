@@ -1,0 +1,120 @@
+<!-- Curso de Engenharia de Software - UniEVANGÉLICA
+Disciplina de Sistemas Gerenciadores de Banco de Dados
+Dev: Yago Romualdo Vieira - 2012064
+01/04/2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+
+<body>
+    <!-- É a tag que define uma seção de navegação, na qual é comum apresentar 
+        links para outras páginas do site. Nesse caso, o <nav> contém uma lista <ul> 
+            de links para outras páginas relacionadas ao tema futebol. -->
+    <nav>
+        <!-- É a tag que define uma lista não ordenada de itens. 
+            Dentro do <ul> há cinco tags <li>, cada uma delas contendo um link <a> 
+                para uma página relacionada ao futebol. -->
+        <ul>
+            <!-- É a tag que define cada item de uma lista. 
+                Nesse caso, cada <li> contém um link <a> para uma página 
+                relacionada ao futebol. -->
+            <li>
+                <!-- é a tag que define um link. Dentro do atributo href é especificado 
+                    o endereço da página que será aberta ao clicar no link. 
+                    Dentro da tag <a> há o texto que será exibido como o nome do link. -->
+                <a href="texto.html">Texto</a>
+            </li>
+            <li>
+                <a href="formulario.html">Formulário</a>
+            </li>
+            <li>
+                <a href="imagens.html">Imagens</a>
+            </li>
+            <li>
+                <a href="tabelas.html">Tabelas</a>
+            </li>
+            <li>
+                <a href="#">Menu Atual</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--  É uma tag de cabeçalho que indica o título da página. -->
+    <h1>Menu de Futebol</h1>
+
+    <!-- Essa é outra tag de cabeçalho que representa um sub-título da página. -->
+    <h2>Tabela</h2>
+    <!-- È a tag que define uma tabela HTML. Dentro da tabela, há quatro tags 
+        <tr> (uma para o cabeçalho e três para os dados), cada uma contendo três tags 
+            <th> ou <td> que representam as células da tabela. O <th> é utilizado para 
+                cabeçalhos de coluna e <td> é utilizado para dados. -->
+    <table>
+        <!-- É a tag que define uma linha em uma tabela. -->
+        <tr>
+            <!-- É a tag que define um cabeçalho de coluna em uma tabela.  -->
+            <th>Time</th>
+            <th>Jogador</th>
+            <th>Gols</th>
+        </tr>
+        <tr>
+            <!-- É a tag que define uma célula de dados em uma tabela. -->
+            <td>Barcelona</td>
+            <td>Lionel Messi</td>
+            <td>71</td>
+        </tr>
+        <tr>
+            <td>Paris Saint-Germain</td>
+            <td>Neymar Jr</td>
+            <td>51</td>
+        </tr>
+        <tr>
+            <td>Real Madrid</td>
+            <td>Karim Benzema</td>
+            <td>41</td>
+        </tr>
+    </table>
+
+    <h2>Estádio</h2>
+    <!-- É a tag que define uma imagem. Dentro do atributo src é especificado o 
+        endereço da imagem. O atributo alt fornece um texto alternativo para ser 
+        exibido caso a imagem não possa ser carregada. Os atributos width e height 
+        especificam as dimensões da imagem em pixels. -->
+    <img src="img/maracana.png" alt="Estádio do Maracanã" width="800" height="400">
+    <!-- É a tag que define um parágrafo. Nesse caso, é utilizado para fornecer 
+        uma descrição do estádio do Maracanã. -->
+    <p>Estádio do Maracanã, localizado no Rio de Janeiro, Brasil.</p>
+
+    <h2>Formulário de Pesquisa</h2>
+    <!-- Define um formulário HTML que permite a entrada de informações do usuário. 
+        Atributos action e method são definidos como action="#" e method="get", 
+        respectivamente. action especifica para onde os dados do formulário serão 
+        enviados, neste caso para o próprio documento atual. O method especifica o 
+        método HTTP utilizado para enviar os dados do formulário, neste caso, "get", 
+        que envia os dados do formulário como parâmetros na URL. -->
+    <form action="#" method="get">
+        <!-- Define uma etiqueta descritiva para um elemento <input> no formulário. 
+            O atributo for é definido como for="pesquisa", o que indica que o rótulo 
+            se refere ao campo de entrada de pesquisa com o id="pesquisa". -->
+        <label for="pesquisa">Pesquisar:</label>
+        <!-- Define um campo de entrada para o formulário. Atributos type, id, e name 
+            são definidos como type="text", id="pesquisa" e name="pesquisa", 
+            respectivamente. type especifica o tipo do campo de entrada, neste caso 
+            um campo de entrada de texto. id especifica um identificador único para o 
+            campo de entrada e name especifica o nome do campo de entrada que será 
+            enviado com os dados do formulário. -->
+        <input type="text" id="pesquisa" name="pesquisa">
+        <!-- Define um botão de envio para o formulário. O atributo type é definido como 
+            type="submit", que cria um botão de envio que envia os dados do formulário 
+            quando clicado. O valor do botão é definido como "Buscar". -->
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+
+</html>
