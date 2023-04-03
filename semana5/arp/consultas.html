@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacientes</title>
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
     crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="pacientes/pacientes.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Consultas</title>
 </head>
 <body>
     <nav class="navbar nav navbar-expand-lg ">
@@ -40,13 +39,13 @@
                             href="pacientes.html">Pacientes</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page"
-                          href="consultas.html">Consultas</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page"
-                          href="medicamentos.html">Medicamentos</a>
-                  </li>
+                        <a class="nav-link active" aria-current="page"
+                            href="consultas.html">Consultas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="medicamentos.html">Medicamentos</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,35 +54,48 @@
 <div class="content">
     <div class="card">
         <div class="">
-            <h2 class="title-card">Lista de Pacientes</h2>
+            <h2 class="title-card">Lista de Consultas</h2>
         </div>
         <br>
-
-        <div class="row">
-            <div class="col-md-5">
-        <input class="form-control " type="text" id="search-input" oninput="searchPatients()" placeholder="Pesquisar por nome ou cpf" aria-label="Pesquisar por nome ou cpf">
-    </div>
-        <div class="col-md-4">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-    </div>
-    </div>
-        <br>
+     
         <table class="table">
             <thead>
               <tr class="row">
                 <th class="col-md-1">#</th>
-                <th class="col-md-4">Nome</th>
-                <th class="col-md-3">CPF</th>
-                <th class="col-md-4">Telefone</th>
+                <th class="col-md-3">Data da colsulta</th>
+                <th class="col-md-3">Paciente</th>
+                <th class="col-md-3">Médico</th>
+                <th class="col-md-2">Tipo</th>
               </tr>
             </thead>
-
-            <tbody id="patient-list">
+            <tbody>
+              <tr class="row">
+                <td class="col-md-1">1</td>
+                <td class="col-md-3">08:00 03/04/2023</td>
+                <td class="col-md-3">José da Silva</td>
+                <td class="col-md-3">Dr. Marcos</td>
+                <td class="col-md-2">Cardiologia</td>
+              </tr>
+              <tr class="row">
+                <td class="col-md-1">2</td>
+                <td class="col-md-3">09:00 03/04/2023</td>
+                <td class="col-md-3">Fábio Souza</td>
+                <td class="col-md-3">Dr. José</td>
+                <td class="col-md-2">Dermatologia</td>
+              </tr>
+              <tr class="row">
+                <td class="col-md-1">3</td>
+                <td class="col-md-3">10:00 03/04/2023</td>
+                <td class="col-md-3">Maria Silva</td>
+                <td class="col-md-3">Dr. Miguel</td>
+                <td class="col-md-2">Hematologia</td>
+              </tr>
+              </tr>
             </tbody>
           </table>
+
 </div>
-<footer><h4></h4></footer>
-<script src="script.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
 </html>

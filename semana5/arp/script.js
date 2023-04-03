@@ -49,3 +49,35 @@ const patients = [
   
   displayPatients(patients);
   
+
+
+  function adicionarMedicamento() {
+    var novoMedicamento = document.getElementById("novo-medicamento").value;
+    if (novoMedicamento === "") {
+      alert("Por favor, insira um medicamento válido.");
+    } else {
+      var listaMedicamentos = document.getElementById("lista-medicamentos");
+      var novoItem = document.createElement("li");
+      novoItem.className = "li-novo-medicamento";
+      novoItem.appendChild(document.createTextNode(novoMedicamento));
+      listaMedicamentos.appendChild(novoItem);
+      document.getElementById("novo-medicamento").value = "";
+    }
+  }
+
+  function removerMedicamento() {
+    var listaMedicamentos = document.getElementById("lista-medicamentos");
+    var itensSelecionados = listaMedicamentos.querySelectorAll("li.selecionado");
+    for (var i = 0; i < itensSelecionados.length; i++) {
+      listaMedicamentos.removeChild(itensSelecionados[i]);
+    }
+  }
+
+  function selecionarItem(event) {
+    var item = event.target;
+    if (item.classList.contains("selecionado")) {
+      item.classList.remove("selecionado");
+    } else {
+      item.classList.add("selecionado");
+    }
+  }

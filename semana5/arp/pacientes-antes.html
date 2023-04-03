@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pacientes/pacientes.css">
+</head>
+<body>
+    <nav class="navbar nav navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> UniSoft</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="index.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="agendamento.html">Agendamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="pacientes.html">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="agendamento.html">Consultas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="agendamento.html">Medicamentos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="card">
+        <div class="">
+            <h2 class="title-card">Lista de Pacientes</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+        <input class="form-control " type="search" placeholder="Pesquisar por nome ou cpf" aria-label="Pesquisar por nome ou cpf">
+    </div>
+        <div class="col-md-4">
+        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+    </div>
+    </div>
+        <br>
+        <table class="table">
+            <thead>
+              <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-3">Nome</th>
+                <th class="col-md-3">CPF</th>
+                <th class="col-md-3">Telefone</th>
+                <th class="col-md-2">Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row">
+                <th class="col-md-1">1</th>
+                <td class="col-md-3">José</td>
+                <td class="col-md-3">000.000.000-00</td>
+                <td class="col-md-3">(62) 9 9999 9999</td>
+                <td class="col-md-2"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Visualizar
+                  </button></td>
+              </tr>
+              <tr class="row">
+                <th class="col-md-1">2</th>
+                <td class="col-md-3">Marcos</td>
+                <td class="col-md-3">000.000.000-00</td>
+                <td class="col-md-3">(62) 9 9999 9999</td>
+                <td class="col-md-2"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Visualizar
+                  </button></td>
+              </tr>
+              <tr class="row">
+                <th class="col-md-1">3</th>
+                <td class="col-md-3">Mateus</td>
+                <td class="col-md-3">000.000.000-00</td>
+                <td class="col-md-3">(62) 9 9999 9999</td>
+                <td class="col-md-2"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Visualizar
+                  </button></td>
+              </tr>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Paciente</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Nome: José</li>
+                    <li>CPF: 000.000.000-00</li>
+                    <li>Telefone: (62) 9 9999 9999</li>
+                    <li>Endereço: Rua 1 Quadra 1 Lote 1 Bairro Centro</li>
+                    <li>Data de nascimento: 01/01/1901</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+<footer><h4></h4></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
