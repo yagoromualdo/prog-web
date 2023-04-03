@@ -1,0 +1,14 @@
+.btn-primary {
+    width: 111px;
+}
+
+.modal-body ul li {
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.form-control[type=search] {}
+
+.btn-outline-success {
+    width: 200px;
+}
