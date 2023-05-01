@@ -1,55 +1,66 @@
-//Init: npm init 
-//Install Express: npm intall express
-//Run: node index.js
+// Curso de Engenharia de Software - UniEVANGÉLICA
+// Disciplina de Programação Web 
+// Dev: Yago Romualdo Vieira 
+// 01/05/2023 
 
-//index.js
-//Import Express
 const express = require('express');
 const app = express();
+const port = 3000;
 
-//Definir que será trabalhado as requisições em json
 app.use(express.json());
 
-//Endpoint inicial
-app.get('/', function(req, res) {
-  res.send('Bem-vindo a aula de prog web');
+const times = [
+    {
+        id: 1, 
+        nome: 'Flamengo',
+        estado: 'RJ'
+    },
+    { 
+        id: 2, 
+        nome: 'Palmeiras',
+        estado: 'SP'
+    },
+  ];
+
+app.get('/api/futebol/brasileirao/seriea', (req, res) => {
+  res.send(times);
 });
 
-//Endpoint de Saída: Lista de Lista
-app.get('/list', function(req, res) {
-  lists = {
-    "lists": [
-      {
-        "name": "Tarefas",
-        "color" : "#030303"
-      },
-      {
-        "name": "Compras",
-        "color" : "#020202"
-      }
-    ]
+app.get('/api/futebol/brasileirao/seriea/time/:time_id', (req, res) => {
+  const time_id = req.params.time_id;
+
+  const time = {
+    id: time_id,
+    nome: times[time_id-1].nome,
+    estado: times[time_id-1].estado
   };
 
-  return res.json(lists);
+  res.send(time);
 });
 
-//Endpoint de entrada: Recebe os dados de uma nova lista.
-app.post('/list', (req, res) => {
+app.post('/api/futebol/brasileirao/seriea/time', (req, res) => {
+  const time = req.body;
 
-  //Dados de Entrada
-  const name = req.body.name;
-  const color = req.body.color;
+  time.id = Math.floor(Math.random() * 1000);
 
-  //Saida
-  return res.json({
-    inputs: {
-      name: name,
-      color: color
-    }
-  });
+  res.send(time);
 });
 
-//Starta o webserver
-app.listen(3000, function() {
-  console.log('Servidor rodando na porta 3000');
+app.put('/api/futebol/brasileirao/seriea/time/:time_id', (req, res) => {
+  const time_id = req.params.time_id;
+  const time = req.body;
+
+  time.id = time_id;
+
+  res.send(time);
+});
+
+app.delete('/api/futebol/brasileirao/seriea/time/:time_id', (req, res) => {
+  const time_id = req.params.time_id;
+
+  res.send(`Time com id ${time_id} foi deletado`);
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
