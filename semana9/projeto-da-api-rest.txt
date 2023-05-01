@@ -1,0 +1,14 @@
+# Curso de Engenharia de Software - UniEVANGÉLICA
+# Disciplina de Sistemas Gerenciadores de Banco de Dados
+# Dev: Yago Romualdo Vieira 
+# 01/05/2023 
+
+GET /api/futebol/brasileirao/seriea - recuperar uma lista de times do Brasileirão Série A
+
+GET /api/futebol/brasileirao/seriea/time/{time_id} - recuperar as informações de um time específico de acordo com o id
+
+POST /api/futebol/brasileirao/seriea/time - adicionar um novo time
+
+PUT /api/futebol/brasileirao/seriea/time/{time_id} - alterar um time específico de acordo com o id
+
+DELETE /api/futebol/brasileirao/seriea/time/{time_id} - deletar um time específico de acordo com o id
