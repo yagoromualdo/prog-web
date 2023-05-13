@@ -15,7 +15,6 @@ class TimeController {
         }
     }
 
- 
     async findById(req, res) {
         try {
             const time = await Time.findByPk(req.params.id, {
@@ -30,6 +29,7 @@ class TimeController {
             res.status(500).json({ error: error.message });
         }
     }
+    
 
     async create(req, res) {
         try {
